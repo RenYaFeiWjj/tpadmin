@@ -1,0 +1,308 @@
+[ 2018-07-09T10:52:16+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/pub/login.html
+[ log ] 127.0.0.1:8686/admin/pub/login.html [运行时间：0.263630s][吞吐率：3.79req/s] [内存消耗：5,091.74kb] [文件加载：72]
+[ info ] [ LANG ] /Users/nicc/git/tpadmin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pub',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_e99aee90ec1b2106afe7ec3b199020a7=1522652056; sm_did=WC39ZUyXRgdFut25X6I%252FFhdBSJs0KRym4gKBtCSxMat8Oq0LCeEzmnOYY8tlAqeApGM0KFCV1EExrq5%252FfSobQVnIpg4tierD3x6fCMIqt8CgBqkbBrqK%252Fb1X5pVVE247jkJlhk%252FgbBtr8WQCkkJTqhEZ8pCNkGi2yQhzpvB%252BjhXhtYmmIeVwmhp5X0Z107PqjAD9XWhrlL37EnR5f7BmO%252BVY0rbpYciasRbQXJxEMo3Rzldybvnzj2rl6kK27XCBF1487577677129; _uab_collina=152275137710668395848024; _umdata=6AF5B463492A874DF1C0F7145B0DEF6B25D456A8E0D7375EB49BCD1A8A746C853DFBD6DC0FCA2DD4CD43AD3E795C914CF48663829D0A1AD70DF4CA28F351EF90; _identity=6fae0ec76fe6500a213997ff8f26961e6aa69e5f895aacf5d4d50285710d8410a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22N7buMd-3-y5606CpV6V9yeVwsV20Uqew%22%2C2592000%5D%22%3B%7D; PHPSESSID=81kpvf7v7u4mu37bue2i8dkv43; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8686',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.004785s ]
+[ info ] [ RUN ] app\admin\controller\Pub->login[ /Users/nicc/git/tpadmin/application/admin/controller/Pub.php ]
+[ info ] [ VIEW ] /Users/nicc/git/tpadmin/public/../application/admin/view/pub/login.html [ array (
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.241148s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101054s ] mysql:dbname=tpadmin;host=39.104.171.51;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.068609s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Mac' , 'Chrome(67.0.3396.99)' , 'http://127.0.0.1:8686/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1531104736) [ RunTime:0.066693s ]
+
+---------------------------------------------------------------
+[ 2018-07-09T10:52:16+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ log ] 127.0.0.1:8686/captcha.html [运行时间：0.029838s][吞吐率：33.51req/s] [内存消耗：1,177.48kb] [文件加载：41]
+[ info ] [ LANG ] /Users/nicc/git/tpadmin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_e99aee90ec1b2106afe7ec3b199020a7=1522652056; sm_did=WC39ZUyXRgdFut25X6I%252FFhdBSJs0KRym4gKBtCSxMat8Oq0LCeEzmnOYY8tlAqeApGM0KFCV1EExrq5%252FfSobQVnIpg4tierD3x6fCMIqt8CgBqkbBrqK%252Fb1X5pVVE247jkJlhk%252FgbBtr8WQCkkJTqhEZ8pCNkGi2yQhzpvB%252BjhXhtYmmIeVwmhp5X0Z107PqjAD9XWhrlL37EnR5f7BmO%252BVY0rbpYciasRbQXJxEMo3Rzldybvnzj2rl6kK27XCBF1487577677129; _uab_collina=152275137710668395848024; _umdata=6AF5B463492A874DF1C0F7145B0DEF6B25D456A8E0D7375EB49BCD1A8A746C853DFBD6DC0FCA2DD4CD43AD3E795C914CF48663829D0A1AD70DF4CA28F351EF90; _identity=6fae0ec76fe6500a213997ff8f26961e6aa69e5f895aacf5d4d50285710d8410a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22N7buMd-3-y5606CpV6V9yeVwsV20Uqew%22%2C2592000%5D%22%3B%7D; PHPSESSID=81kpvf7v7u4mu37bue2i8dkv43; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8686/admin/pub/login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8686',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Users/nicc/git/tpadmin/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-07-09T10:52:26+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/pub/checklogin.html
+[ log ] 127.0.0.1:8686/admin/pub/checklogin.html [运行时间：0.498320s][吞吐率：2.01req/s] [内存消耗：4,980.34kb] [文件加载：72]
+[ info ] [ LANG ] /Users/nicc/git/tpadmin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pub',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_e99aee90ec1b2106afe7ec3b199020a7=1522652056; sm_did=WC39ZUyXRgdFut25X6I%252FFhdBSJs0KRym4gKBtCSxMat8Oq0LCeEzmnOYY8tlAqeApGM0KFCV1EExrq5%252FfSobQVnIpg4tierD3x6fCMIqt8CgBqkbBrqK%252Fb1X5pVVE247jkJlhk%252FgbBtr8WQCkkJTqhEZ8pCNkGi2yQhzpvB%252BjhXhtYmmIeVwmhp5X0Z107PqjAD9XWhrlL37EnR5f7BmO%252BVY0rbpYciasRbQXJxEMo3Rzldybvnzj2rl6kK27XCBF1487577677129; _uab_collina=152275137710668395848024; _umdata=6AF5B463492A874DF1C0F7145B0DEF6B25D456A8E0D7375EB49BCD1A8A746C853DFBD6DC0FCA2DD4CD43AD3E795C914CF48663829D0A1AD70DF4CA28F351EF90; _identity=6fae0ec76fe6500a213997ff8f26961e6aa69e5f895aacf5d4d50285710d8410a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22N7buMd-3-y5606CpV6V9yeVwsV20Uqew%22%2C2592000%5D%22%3B%7D; PHPSESSID=81kpvf7v7u4mu37bue2i8dkv43; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8686/admin/pub/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1:8686',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8686',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'admin',
+  'password' => '123456',
+  'captcha' => 'hq6j',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.003955s ]
+[ info ] [ RUN ] app\admin\controller\Pub->checkLogin[ /Users/nicc/git/tpadmin/application/admin/controller/Pub.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.106341s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078885s ] mysql:dbname=tpadmin;host=39.104.171.51;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.057598s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.064525s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1531104746,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.052831s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.052218s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(67.0.3396.99)' , 'Mac') [ RunTime:0.055259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.053442s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Mac' , 'Chrome(67.0.3396.99)' , 'http://127.0.0.1:8686/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"hq6j\";}' , 1531104746) [ RunTime:0.051125s ]
+
+---------------------------------------------------------------
+[ 2018-07-09T10:52:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] 127.0.0.1:8686/admin/index/index.html [运行时间：0.423288s][吞吐率：2.36req/s] [内存消耗：5,229.21kb] [文件加载：75]
+[ info ] [ LANG ] /Users/nicc/git/tpadmin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_e99aee90ec1b2106afe7ec3b199020a7=1522652056; sm_did=WC39ZUyXRgdFut25X6I%252FFhdBSJs0KRym4gKBtCSxMat8Oq0LCeEzmnOYY8tlAqeApGM0KFCV1EExrq5%252FfSobQVnIpg4tierD3x6fCMIqt8CgBqkbBrqK%252Fb1X5pVVE247jkJlhk%252FgbBtr8WQCkkJTqhEZ8pCNkGi2yQhzpvB%252BjhXhtYmmIeVwmhp5X0Z107PqjAD9XWhrlL37EnR5f7BmO%252BVY0rbpYciasRbQXJxEMo3Rzldybvnzj2rl6kK27XCBF1487577677129; _uab_collina=152275137710668395848024; _umdata=6AF5B463492A874DF1C0F7145B0DEF6B25D456A8E0D7375EB49BCD1A8A746C853DFBD6DC0FCA2DD4CD43AD3E795C914CF48663829D0A1AD70DF4CA28F351EF90; _identity=6fae0ec76fe6500a213997ff8f26961e6aa69e5f895aacf5d4d50285710d8410a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22N7buMd-3-y5606CpV6V9yeVwsV20Uqew%22%2C2592000%5D%22%3B%7D; PHPSESSID=81kpvf7v7u4mu37bue2i8dkv43; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8686/admin/pub/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8686',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.003552s ]
+[ info ] [ RUN ] app\admin\controller\Index->index[ /Users/nicc/git/tpadmin/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/nicc/git/tpadmin/public/../application/admin/view/index/index.html [ array (
+  0 => 'groups',
+  1 => 'menu',
+) ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ /Users/nicc/git/tpadmin/application/admin/widget/Index.php ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.105250s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.070021s ] mysql:dbname=tpadmin;host=39.104.171.51;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.044791s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.045651s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.054364s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,2,3,5,6,7)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.060640s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.062110s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Mac' , 'Chrome(67.0.3396.99)' , 'http://127.0.0.1:8686/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1531104746) [ RunTime:0.042587s ]
+
+---------------------------------------------------------------
+[ 2018-07-09T10:52:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/welcome.html
+[ log ] 127.0.0.1:8686/admin/index/welcome.html [运行时间：0.407931s][吞吐率：2.45req/s] [内存消耗：5,183.72kb] [文件加载：73]
+[ info ] [ LANG ] /Users/nicc/git/tpadmin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_e99aee90ec1b2106afe7ec3b199020a7=1522652056; sm_did=WC39ZUyXRgdFut25X6I%252FFhdBSJs0KRym4gKBtCSxMat8Oq0LCeEzmnOYY8tlAqeApGM0KFCV1EExrq5%252FfSobQVnIpg4tierD3x6fCMIqt8CgBqkbBrqK%252Fb1X5pVVE247jkJlhk%252FgbBtr8WQCkkJTqhEZ8pCNkGi2yQhzpvB%252BjhXhtYmmIeVwmhp5X0Z107PqjAD9XWhrlL37EnR5f7BmO%252BVY0rbpYciasRbQXJxEMo3Rzldybvnzj2rl6kK27XCBF1487577677129; _uab_collina=152275137710668395848024; _umdata=6AF5B463492A874DF1C0F7145B0DEF6B25D456A8E0D7375EB49BCD1A8A746C853DFBD6DC0FCA2DD4CD43AD3E795C914CF48663829D0A1AD70DF4CA28F351EF90; _identity=6fae0ec76fe6500a213997ff8f26961e6aa69e5f895aacf5d4d50285710d8410a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22N7buMd-3-y5606CpV6V9yeVwsV20Uqew%22%2C2592000%5D%22%3B%7D; PHPSESSID=81kpvf7v7u4mu37bue2i8dkv43; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8686/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8686',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.017320s ]
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ /Users/nicc/git/tpadmin/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/nicc/git/tpadmin/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'last_login_ip',
+  1 => 'last_login_loc',
+  2 => 'current_login_ip',
+  3 => 'current_login_loc',
+  4 => 'info',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.120414s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087154s ] mysql:dbname=tpadmin;host=39.104.171.51;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.057730s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.060506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.058470s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Mac' , 'Chrome(67.0.3396.99)' , 'http://127.0.0.1:8686/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1531104747) [ RunTime:0.061554s ]
+
+---------------------------------------------------------------
+[ 2018-07-09T10:52:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/vip_video/index.html
+[ log ] 127.0.0.1:8686/admin/vip_video/index.html [运行时间：0.040904s][吞吐率：24.45req/s] [内存消耗：4,008.69kb] [文件加载：60]
+[ info ] [ LANG ] /Users/nicc/git/tpadmin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'vip_video',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_e99aee90ec1b2106afe7ec3b199020a7=1522652056; sm_did=WC39ZUyXRgdFut25X6I%252FFhdBSJs0KRym4gKBtCSxMat8Oq0LCeEzmnOYY8tlAqeApGM0KFCV1EExrq5%252FfSobQVnIpg4tierD3x6fCMIqt8CgBqkbBrqK%252Fb1X5pVVE247jkJlhk%252FgbBtr8WQCkkJTqhEZ8pCNkGi2yQhzpvB%252BjhXhtYmmIeVwmhp5X0Z107PqjAD9XWhrlL37EnR5f7BmO%252BVY0rbpYciasRbQXJxEMo3Rzldybvnzj2rl6kK27XCBF1487577677129; _uab_collina=152275137710668395848024; _umdata=6AF5B463492A874DF1C0F7145B0DEF6B25D456A8E0D7375EB49BCD1A8A746C853DFBD6DC0FCA2DD4CD43AD3E795C914CF48663829D0A1AD70DF4CA28F351EF90; _identity=6fae0ec76fe6500a213997ff8f26961e6aa69e5f895aacf5d4d50285710d8410a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22N7buMd-3-y5606CpV6V9yeVwsV20Uqew%22%2C2592000%5D%22%3B%7D; PHPSESSID=81kpvf7v7u4mu37bue2i8dkv43; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8686/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8686',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.010373s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
