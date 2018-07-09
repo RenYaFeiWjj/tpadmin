@@ -10,6 +10,7 @@ class ComposerStaticInit42f1a2b06c32df0543aaa7dd0a10f07a
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '1cfd2761b63b0a29ed23657ea394cb2d' => __DIR__ . '/..' . '/topthink/think-captcha/src/helper.php',
         '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
+        'e8025d38be2c8391921450d9022cbbd0' => __DIR__ . '/..' . '/ennnnny/tbk/src/Kernel/Support/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -26,6 +27,10 @@ class ComposerStaticInit42f1a2b06c32df0543aaa7dd0a10f07a
         'Q' => 
         array (
             'Qiniu\\' => 6,
+        ),
+        'E' => 
+        array (
+            'ETaobao\\' => 8,
         ),
     );
 
@@ -50,11 +55,19 @@ class ComposerStaticInit42f1a2b06c32df0543aaa7dd0a10f07a
         array (
             0 => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu',
         ),
+        'ETaobao\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ennnnny/tbk/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
         'P' => 
         array (
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
             'PHPExcel' => 
             array (
                 0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',

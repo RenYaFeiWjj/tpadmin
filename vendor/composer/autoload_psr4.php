@@ -11,4 +11,5 @@ return array(
     'think\\' => array($baseDir . '/thinkphp/library/think'),
     'mailer\\' => array($vendorDir . '/yuan1994/tp-mailer/src/mailer'),
     'Qiniu\\' => array($vendorDir . '/qiniu/php-sdk/src/Qiniu'),
+    'ETaobao\\' => array($vendorDir . '/ennnnny/tbk/src'),
 );
