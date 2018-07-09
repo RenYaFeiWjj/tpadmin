@@ -46,7 +46,10 @@ class Goods extends Controller
         if ($httpStatusCode == 200) {
             $output = json_decode($output, true);
             $this->session_key = $output['access_token'];
-            Cache::set('session_key', $this->session_key , 86400);
+            Cache::set('session_key', $output['access_token'], 86400);
+            print_r(Cache::get('session_key'));
+            exit;
+
         }
     }
 
@@ -56,7 +59,7 @@ class Goods extends Controller
         exit;
     }
 
-    public function getGoods($q = '女装', $sort = '_desc', $PageNo = 1, $PageSize = 20)
+    public function getGoods($q = '女装', $cat = '16,18', $sort = '_desc', $PageNo = 1, $PageSize = 20)
     {
         $config = [
             'appkey' => '24922818',
@@ -64,20 +67,25 @@ class Goods extends Controller
             'format' => 'json',
             'sandbox' => false,
         ];
-
+        $this->session_key = Cache::get('session_key');
+        if (!$this->session_key) {
+            echo '没有session_key';
+        }
         $app = Factory::Tbk($config);
         $param = [
+            'q' => $q,
+            'cat' => $cat,
             'site_id' => 45874161,
             'adzone_id' => 743554016,
-
+            'session' => $this->session_key,
+            'has_coupon' => "true", //有优惠券
+            'need_free_shipment' => 'true',//包邮
         ];
         $resp = $app->sc->optionalMaterial($param);
-        print_r($resp);
-        exit;
-        if (isset($resp->results)) {
+        if (isset($resp->result_list)) {
             $resp = json_encode($resp);
             $resp = json_decode($resp, true);
-            $res = $resp['results']['n_tbk_item'];
+            $res = $resp['result_list']['map_data'];
             return json_encode(['code' => 0, 'msg' => 'ok', 'data' => $res, 'count' => $resp['total_results']], JSON_UNESCAPED_UNICODE);
         }
     }

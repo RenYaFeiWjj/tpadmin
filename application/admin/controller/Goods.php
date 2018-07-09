@@ -19,11 +19,11 @@ class Goods extends controller
         $page = 1;
         $count = 0;
         $param = $this->request->param();
-        if($param){
+        if ($param) {
             $Goods = new \app\api\controller\v1\Goods();
-            $data = $Goods->getGoods($param['q'], '_desc', $page ,20);
-            if($data){
-                $data = json_decode($data , true);
+            $data = $Goods->getGoods($param['q'], '16,18', '_desc', $page, 20);
+            if ($data) {
+                $data = json_decode($data, true);
                 $count = $data['count'];
                 $list = $data['data'];
             }

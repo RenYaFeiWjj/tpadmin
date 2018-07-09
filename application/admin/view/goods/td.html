@@ -3,7 +3,11 @@
 <td><img src="{$vo.pict_url}" style="width:50px;" alt=""></td>
 <td>{$vo.reserve_price}</td>
 <td>{$vo.zk_final_price}</td>
+<td>{$vo.commission_rate}</td>
+<td>{$vo.coupon_total_count}</td>
+<td>{$vo.coupon_remain_count}</td>
+<td><a href="{$vo.coupon_info}">{$vo.coupon_info}</a></td>
+<td><a href="{$vo.url}">商品淘客链接</a></td>
 <td>{$vo.user_type == 1 ? '天猫' : '淘宝'}</td>
 <td>{$vo.provcity}</td>
-<td>{$vo.nick}</td>
 <td>{$vo.volume}</td>
