@@ -1,11 +1,11 @@
 <?php
 /**
- * TOP API: taobao.tbk.sc.newuser.order.get request
+ * TOP API: taobao.tbk.dg.newuser.order.get request
  * 
  * @author auto create
- * @since 1.0, 2018.06.22
+ * @since 1.0, 2018.07.05
  */
-class TbkScNewuserOrderGetRequest
+class TbkDgNewuserOrderGetRequest
 {
 	/** 
 	 * 活动id， 活动名称与活动ID列表，请参见https://tbk.bbs.taobao.com/detail.html?appId=45301&postId=8599277
@@ -31,11 +31,6 @@ class TbkScNewuserOrderGetRequest
 	 * 页大小，默认20，1~100
 	 **/
 	private $pageSize;
-	
-	/** 
-	 * mm_xxx_xxx_xxx的第二位
-	 **/
-	private $siteId;
 	
 	/** 
 	 * 开始时间，当活动为淘宝活动，表示最早注册时间；当活动为支付宝活动，表示最早绑定时间；当活动为天猫活动，表示最早领取红包时间
@@ -99,17 +94,6 @@ class TbkScNewuserOrderGetRequest
 		return $this->pageSize;
 	}
 
-	public function setSiteId($siteId)
-	{
-		$this->siteId = $siteId;
-		$this->apiParas["site_id"] = $siteId;
-	}
-
-	public function getSiteId()
-	{
-		return $this->siteId;
-	}
-
 	public function setStartTime($startTime)
 	{
 		$this->startTime = $startTime;
@@ -123,7 +107,7 @@ class TbkScNewuserOrderGetRequest
 
 	public function getApiMethodName()
 	{
-		return "taobao.tbk.sc.newuser.order.get";
+		return "taobao.tbk.dg.newuser.order.get";
 	}
 	
 	public function getApiParas()
