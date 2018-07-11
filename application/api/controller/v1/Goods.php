@@ -99,16 +99,27 @@ class Goods extends Controller
     }
 
 
-    public function cid($parent_cid)
+    public function cid()
     {
-        $app = Factory::Tbk($this->config);
-        $param = [
-            'cids'=>'',
-            'fields' => 'cid,parent_cid,name,is_parent',
-            'parent_cid' => $parent_cid
-        ];
-        $resp = $app->itemcats->get($param);
-        print_r($resp);
-        exit;
+        $param = $this->request->param();
+        $data = $param['itemcats_get_response']['item_cats']['item_cat'];
+        $is_parent = [];
+        foreach ($data as $v) {
+            $cat = db('cat')->where(['cid' => $v['cid']])->find();
+            if (!$cat) {
+                $param = [
+                    'cid' => $v['cid'],
+                    'name' => $v['name'],
+                    'pid' => $v['parent_cid'],
+                    'create_time' => time(),
+                    'update_time' => time(),
+                ];
+                db('cat')->insert($param);
+            }
+            if ($v['is_parent']) {
+                $is_parent[] = $v['cid'];
+            }
+        }
+        print_r($is_parent);exit;
     }
 }
