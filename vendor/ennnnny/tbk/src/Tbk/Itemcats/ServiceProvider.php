@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace ETaobao\Tbk\Dg;
+namespace ETaobao\Tbk\Itemcats;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -26,7 +26,7 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        $app['dg'] = function ($app) {
+        $app['itemcats'] = function ($app) {
             return new Client($app);
         };
     }

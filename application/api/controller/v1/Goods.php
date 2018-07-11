@@ -18,6 +18,12 @@ class Goods extends Controller
 {
     public $code;
     public $session_key;
+    public $config = [
+        'appkey' => '24922818',
+        'secretKey' => '3816fbc584ee3e5d571dbe8baf4a65f6',
+        'format' => 'json',
+        'sandbox' => false,
+    ];
 
     public function index()
     {
@@ -61,17 +67,12 @@ class Goods extends Controller
 
     public function getGoods($q = '', $cat = '', $sort = '_desc', $start_price = 1, $end_price = '100000000', $PageNo = 1)
     {
-        $config = [
-            'appkey' => '24922818',
-            'secretKey' => '3816fbc584ee3e5d571dbe8baf4a65f6',
-            'format' => 'json',
-            'sandbox' => false,
-        ];
+
         $this->session_key = Cache::get('session_key');
         if (!$this->session_key) {
             echo '没有session_key';
         }
-        $app = Factory::Tbk($config);
+        $app = Factory::Tbk($this->config);
         $param = [
             'q' => $q,
             'cat' => $cat,
@@ -95,5 +96,19 @@ class Goods extends Controller
             $res = $resp['result_list']['map_data'];
             return json_encode(['code' => 0, 'msg' => 'ok', 'data' => $res, 'count' => $resp['total_results']], JSON_UNESCAPED_UNICODE);
         }
+    }
+
+
+    public function cid($parent_cid)
+    {
+        $app = Factory::Tbk($this->config);
+        $param = [
+            'cids'=>'',
+            'fields' => 'cid,parent_cid,name,is_parent',
+            'parent_cid' => $parent_cid
+        ];
+        $resp = $app->itemcats->get($param);
+        print_r($resp);
+        exit;
     }
 }
