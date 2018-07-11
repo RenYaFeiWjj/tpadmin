@@ -59,7 +59,7 @@ class Goods extends Controller
         exit;
     }
 
-    public function getGoods($q = '女装', $cat = '16,18', $sort = '_desc', $PageNo = 1, $PageSize = 20)
+    public function getGoods($q = '全部', $sort = '_desc', $start_price = 1, $end_price = '100000000', $PageNo = 1)
     {
         $config = [
             'appkey' => '24922818',
@@ -74,12 +74,18 @@ class Goods extends Controller
         $app = Factory::Tbk($config);
         $param = [
             'q' => $q,
-            'cat' => $cat,
             'site_id' => 45874161,
             'adzone_id' => 743554016,
             'session' => $this->session_key,
             'has_coupon' => "true", //有优惠券
             'need_free_shipment' => 'true',//包邮
+            'platform' => 2,
+            'end_price' => $end_price,
+            'start_price' => $start_price,
+//            'end_tk_rate' => '5678',
+//            'start_tk_rate' => '1678',
+            'page_no' => $PageNo,
+            'sort' => $sort,
         ];
         $resp = $app->sc->optionalMaterial($param);
         if (isset($resp->result_list)) {

@@ -21,7 +21,7 @@ class Goods extends controller
         $param = $this->request->param();
         if ($param) {
             $Goods = new \app\api\controller\v1\Goods();
-            $data = $Goods->getGoods($param['q'], '16,18', '_desc', $page, 20);
+            $data = $Goods->getGoods($param['q'], '_desc',1,'100000000' ,$page);
             if ($data) {
                 $data = json_decode($data, true);
                 $count = $data['count'];
