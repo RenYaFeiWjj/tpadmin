@@ -19,7 +19,7 @@ class Goods extends controller
         $page = 1;
         $count = 0;
         $param = $this->request->param();
-        if ($param) {
+        if (isset($param['q']) && isset($param['cat'])) {
             $Goods = new \app\api\controller\v1\Goods();
             $data = $Goods->getGoods($param['q'], $param['cat'] , '_desc',1,'100000000' ,$page);
             if ($data) {
