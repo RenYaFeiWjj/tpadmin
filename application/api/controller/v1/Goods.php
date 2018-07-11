@@ -59,7 +59,7 @@ class Goods extends Controller
         exit;
     }
 
-    public function getGoods($q = '全部', $sort = '_desc', $start_price = 1, $end_price = '100000000', $PageNo = 1)
+    public function getGoods($q = '', $cat = '', $sort = '_desc', $start_price = 1, $end_price = '100000000', $PageNo = 1)
     {
         $config = [
             'appkey' => '24922818',
@@ -74,6 +74,7 @@ class Goods extends Controller
         $app = Factory::Tbk($config);
         $param = [
             'q' => $q,
+            'cat' => $cat,
             'site_id' => 45874161,
             'adzone_id' => 743554016,
             'session' => $this->session_key,
