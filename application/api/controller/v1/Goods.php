@@ -34,7 +34,8 @@ class Goods extends Controller
             'client_id' => '24922818',
             'client_secret' => '3816fbc584ee3e5d571dbe8baf4a65f6',
             'code' => $this->code,
-            'redirect_uri' => 'http://api.wangjj.cn/v1/goods/key');
+            'redirect_uri' => '127.0.0.1:8686/v1/goods/key');
+
         $post_data = '';
         foreach ($postfields as $key => $value) {
             $post_data .= "$key=" . urlencode($value) . "&";
@@ -94,7 +95,8 @@ class Goods extends Controller
             $resp = json_encode($resp);
             $resp = json_decode($resp, true);
             $res = $resp['result_list']['map_data'];
-            return json_encode(['code' => 0, 'msg' => 'ok', 'data' => $res, 'count' => $resp['total_results']], JSON_UNESCAPED_UNICODE);
+            $data = json_encode(['code' => 0, 'msg' => 'ok', 'data' => $res, 'count' => $resp['total_results']] );
+            return $data;
         }
     }
 
