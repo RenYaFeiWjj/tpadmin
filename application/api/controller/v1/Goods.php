@@ -95,7 +95,13 @@ class Goods extends Controller
             $resp = json_encode($resp);
             $resp = json_decode($resp, true);
             $res = $resp['result_list']['map_data'];
-            $data = json_encode(['code' => 0, 'msg' => 'ok', 'data' => $res, 'count' => $resp['total_results']] );
+            foreach ($res as &$v) {
+                $preg = '/减(.*?)元/i';//匹配img标签的正则表达式
+                preg_match_all($preg, $v['coupon_info'], $preg_data);//这里匹配所有的img
+                $v['coupon_info'] = $preg_data[1][0];
+                $v['quan_hou'] = $v['zk_final_price'] - $preg_data[1][0];
+            }
+            $data = json_encode(['code' => 0, 'msg' => 'ok', 'data' => $res, 'count' => $resp['total_results']]);
             return $data;
         }
     }
@@ -122,6 +128,7 @@ class Goods extends Controller
                 $is_parent[] = $v['cid'];
             }
         }
-        print_r($is_parent);exit;
+        print_r($is_parent);
+        exit;
     }
 }
