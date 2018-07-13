@@ -66,7 +66,7 @@ class Goods extends Controller
         exit;
     }
 
-    public function getGoods($q = '', $cat = '', $sort = '_desc', $start_price = 1, $end_price = '100000000', $PageNo = 1)
+    public function getGoods($q = '', $cat = '', $sort = '_desc', $start_price = 1, $end_price = '100000000', $page_no = 1)
     {
 
         $this->session_key = Cache::get('session_key');
@@ -87,7 +87,7 @@ class Goods extends Controller
             'start_price' => $start_price,
 //            'end_tk_rate' => '5678',
 //            'start_tk_rate' => '1678',
-            'page_no' => $PageNo,
+            'page_no' => $page_no,
             'sort' => $sort,
         ];
         $resp = $app->sc->optionalMaterial($param);
