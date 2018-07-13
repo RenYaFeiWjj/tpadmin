@@ -10,6 +10,7 @@
 namespace app\api\controller\v1;
 
 use ETaobao\Factory;
+use phpmailer\PHPMailer;
 use think\Controller;
 use think\Cache;
 
@@ -72,6 +73,7 @@ class Goods extends Controller
         $this->session_key = Cache::get('session_key');
         if (!$this->session_key) {
             echo '没有session_key';
+            $this->sendEmail();
         }
         $app = Factory::Tbk($this->config);
         $param = [
@@ -132,7 +134,13 @@ class Goods extends Controller
         exit;
     }
 
-
+    /**
+     * @return string
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     * User: 任亚飞
+     */
     public function getBanner()
     {
         $banner = db('banner')->where(['isdelete' => 0, 'status' => 1])->order('sort desc')->select();
@@ -141,5 +149,36 @@ class Goods extends Controller
         }else{
             return json_encode(['code' => 1, 'msg' => 'null']);
         }
+    }
+
+    public function sendEmail()
+    {
+        $toemail = ['renyafei@itenscen.cn'];//定义收件人的邮箱
+//,
+        foreach ($toemail as $item) {
+            $mail = new PHPMailer();
+            $mail->isSMTP();// 使用SMTP服务
+            $mail->CharSet = "utf8";// 编码格式为utf8，不设置编码的话，中文会出现乱码
+            $mail->Host = "smtp.qq.com";// 发送方的SMTP服务器地址
+            $mail->SMTPAuth = true;// 是否使用身份验证
+            $mail->Username = "1358971278@qq.com";// 发送方的163邮箱用户名，就是你申请163的SMTP服务使用的163邮箱
+            $mail->Password = "rcbkgzymolopggbj";// 发送方的邮箱密码，注意用163邮箱这里填写的是“客户端授权密码”而不是邮箱的登录密码！</span><span style="color:#333333;">
+            $mail->SMTPSecure = "ssl";// 使用ssl协议方式
+            $mail->Port = 465;// 163邮箱的ssl协议方式端口号是465/994
+            $mail->setFrom($mail->Username, "任亚飞");// 设置发件人信息，如邮件格式说明中的发件人，这里会显示为Mailer(xxxx@163.com），Mailer是当做名字显示
+            $mail->addReplyTo($mail->Username, "Reply");// 设置回复人信息，指的是收件人收到邮件后，如果要回复，回复邮件将发送到的邮箱地址
+            $mail->Subject = "没有session_key啦!!!!!!";// 邮件标题
+            $mail->Body = "<a href='https://oauth.taobao.com/authorize?response_type=code&client_id=24922818&redirect_uri=api.wangjj.cn/v1/goods/index&state=1212&view=web'>点击获取session_key</a>".PHP_EOL
+            ."<p>https://oauth.taobao.com/authorize?response_type=code&client_id=24922818&redirect_uri=api.wangjj.cn/v1/goods/index&state=1212&view=web</p>";// 邮件正文
+            $mail->IsHTML(true);
+            $mail->addAddress($item, '任亚飞');
+            if (!$mail->send()) {// 发送邮件
+                echo "Message could not be sent.";
+                echo "Mailer Error: " . $mail->ErrorInfo;// 输出错误信息
+            } else {
+                echo '发送成功';
+            }
+        }
+
     }
 }
