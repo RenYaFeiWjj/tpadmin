@@ -131,4 +131,15 @@ class Goods extends Controller
         print_r($is_parent);
         exit;
     }
+
+
+    public function getBanner()
+    {
+        $banner = db('banner')->where(['isdelete' => 0, 'status' => 1])->order('sort desc')->select();
+        if ($banner) {
+            return json_encode(['code' => 0, 'msg' => 'ok', 'data' => $banner]);
+        }else{
+            return json_encode(['code' => 1, 'msg' => 'null']);
+        }
+    }
 }
