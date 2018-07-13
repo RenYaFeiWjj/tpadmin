@@ -34,7 +34,7 @@ class Goods extends Controller
             'client_id' => '24922818',
             'client_secret' => '3816fbc584ee3e5d571dbe8baf4a65f6',
             'code' => $this->code,
-            'redirect_uri' => '127.0.0.1:8686/v1/goods/key');
+            'redirect_uri' => 'http://api.wangjj.cn/v1/goods/key');
 
         $post_data = '';
         foreach ($postfields as $key => $value) {
