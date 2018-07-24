@@ -154,7 +154,6 @@ class Goods extends Controller
     public function sendEmail()
     {
         $toemail = ['renyafei@itenscen.cn'];//定义收件人的邮箱
-//,
         foreach ($toemail as $item) {
             $mail = new PHPMailer();
             $mail->isSMTP();// 使用SMTP服务
@@ -179,6 +178,11 @@ class Goods extends Controller
                 echo '发送成功';
             }
         }
+
+    }
+
+    public function item()
+    {
 
     }
 }
