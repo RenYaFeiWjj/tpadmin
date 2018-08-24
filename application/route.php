@@ -11,6 +11,7 @@
 use think\Route;
 
 Route::any('v1/goods/:method', 'api/v1.Goods/:method');
+Route::any('v1/queryLists/:method', 'api/v1.QueryLists/:method');
 
 
 
