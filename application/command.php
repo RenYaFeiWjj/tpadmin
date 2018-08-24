@@ -9,4 +9,7 @@
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
 
-return [];
+return [
+    'app\command\controller\Test',
+    'app\command\controller\TypeList',
+];
